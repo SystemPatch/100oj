@@ -117,7 +117,8 @@ fetch('cards.json')
                 });
             });
 
-            document.getElementById('page-number').innerText = `${currentPage}/${totalPages}`;
+            document.getElementById('page-number').innerText = `${currentPage}`;
+            document.getElementById('total-pages').innerText = `${totalPages}`;
         }
 
         function updateMetaDescription(deck) {

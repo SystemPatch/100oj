@@ -80,7 +80,7 @@
         <div class = "flex flex-row w-1/2 bg-white rounded-2xl border-[6px] border-y-4 border-l-0 btnClass border-[#FFCF94]">
             <div class = "bg-[#FFCF94] pl-3 pr-6 mr-1.5 rounded-l-xl relative flex flex-col justify-center">
                 <div class = "rotate-[270deg] right-3 left-4 mt-12 absolute">
-                    <a href="#" class = "text-2xl text-gray-900/65">Deck</a>
+                    <a href="#" class = "text-2xl text-[#5E5F5E]">Deck</a>
                 </div>
             </div>
             <div id = "deck" class = "flex flex-row gap-0.5 pr-3 py-1">
@@ -96,7 +96,7 @@
         <div class = "flex flex-row bg-white w-full h-full rounded-3xl border-[6px] border-y-4 border-l-0 btnClass border-[#FFCF94]">
             <div class = "bg-[#FFCF94] pl-3 pr-6 mr-1.5 rounded-l-2xl relative flex flex-col justify-center">
                 <div class = "rotate-[270deg] right-4 left-4 mt-20 absolute">
-                    <a href="#" class = "bg-[#A5FF94] px-6 rounded-full border-[#B5B876] border-r-2 border-l-2">Type</a>
+                    <a href="#" class = "bg-[#A5FF94] text-[#5E5F5E] px-6 rounded-full border-[#B5B876] border-r-2 border-l-2">Type</a>
                 </div>
             </div>
             <div id = "cards" class = "w-fit h-fit gap-1.5 bg-white grid grid-cols-7 grid-rows-2 py-1.5 pr-[100px]">
@@ -115,10 +115,14 @@
                 <img src="./cards/Ambush.png" alt="">
                 <img src="./cards/Ambush.png" alt="">
             </div>
-            <div class = "bg-[#FFCF94] z-50 rounded-r-2xl relative h-full pl-2.5 pr-1 flex flex-col gap-4 justify-center">
-                <div id = "prev-page" class = "z-50 border-[3px] border-[#5E5F5E] py-8 bg-white rounded-t-3xl text-center select-none">▲</div>
-                <p id = "page-number">1/9</p>
-                <div id = "next-page" class = "z-50 border-[3px] border-[#5E5F5E] py-8 bg-white rounded-b-3xl text-center select-none">▼</div>
+            <div class = "bg-[#FFCF94] z-50 rounded-r-2xl relative h-full pl-2.5 pr-1 flex flex-col justify-center select-none">
+                <div id = "prev-page" class = "z-50 border-[3px] border-[#5E5F5E] py-8 bg-white rounded-t-3xl text-center">▲</div>
+                <div class = "py-16 w-7 relative">
+                    <p id = "page-number" class = "text-center text-[#5E5F5E] text-lg absolute top-9">1</p>
+                    <p class = "text-center text-[#5E5F5E] text-3xl absolute top-11 left-1">/</p>
+                    <p id = "total-pages" class = "text-center text-[#5E5F5E] text-lg absolute top-14 left-5">0</p>
+                </div>
+                <div id = "next-page" class = "z-50 border-[3px] border-[#5E5F5E] py-8 bg-white rounded-b-3xl text-center">▼</div>
             </div>
         </div>
     </div>
