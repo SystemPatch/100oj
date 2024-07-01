@@ -53,10 +53,21 @@
 </head>
 <body id = "tsparticles" class = "w-full h-screen">
     <div class = "fixed mt-2 w-full h-12 bg-[#FFBE64] flex justify-between z-[50]">
-        <div class = "flex flex-row gap-4 mx-4 items-center">
-            <img title = "Yo" class = "w-2/12" src="./images/siteLogo.png" alt="">
+        <div class = "flex flex-row gap-2 mx-4 items-center">
+            <img title = "Yo" class = "w-24" src="./images/siteLogo.png" alt="">
+            <div class = "w-[400px] h-10 bg-[url('../images/system/menu_title1.png')] bg-[0px_448px] bg-cover" alt="">
+            </div>
             <a href = "../" id = "musicOption" class = "text-white forceBtn hover:text-lg transition-all cursor-pointer">Back to Avatar Creator</a>
-            <a id = "generateLinkBtn" class = "text-white forceBtn hover:text-lg transition-all cursor-pointer">Generate Link</a>
+            <img class = "w-[200px] h-[200px] absolute -right-24 -bottom-16 animate-spin" src="../images/Citral.png" alt="">
+        </div>
+    </div>
+    <div class = "fixed w-full h-full pb-4 flex flex-col justify-end gap-1 z-[200] pointer-events-none">
+        <p id = "footer-text" class = "px-4 bg-black text-white text-xl bg-opacity-30 rounded-r-3xl z-50 py-1 forceBtn w-fit">Create a deck.</p>
+        <p class = "px-4 bg-black text-white text-sm bg-opacity-30 rounded-r-3xl z-50 py-1 forceBtn w-fit">Created by @PixepChief | Alpha</p>
+    </div>
+    <div class = "fixed w-fit h-5/6 pb-16 px-3 flex flex-col mt-20 z-[40]">
+        <div class = "w-max bg-white rounded-2xl border-4 btnClass border-[#FFCF94]">
+            <a id = "generateLinkBtn" class = "text-[#54595D] px-2.5 transition-all cursor-pointer">Share Your Deck</a>
             <dialog id="generateLink" class="modal">
                 <div class="modal-box">
                   <h3 class="text-lg font-bold">Your deck has been generated!</h3>
@@ -69,18 +80,11 @@
                   </div>
                 </div>
             </dialog>
-            <img class = "w-[200px] h-[200px] absolute -right-24 -bottom-16 animate-spin" src="../images/Citral.png" alt="">
         </div>
-    </div>
-    <div class = "fixed w-full h-full pb-4 flex flex-col justify-end gap-1 z-[200] pointer-events-none">
-        <p class = "px-4 bg-black text-white text-xl bg-opacity-30 rounded-r-3xl z-50 py-1 forceBtn w-fit">Create a deck.</p>
-        <p class = "px-4 bg-black text-white text-sm bg-opacity-30 rounded-r-3xl z-50 py-1 forceBtn w-fit">Created by @PixepChief | Alpha</p>
-    </div>
-    <div class = "fixed w-fit h-5/6 pb-16 px-3 gap-1.5 flex flex-col mt-20 w-11/12 z-[40]">
-        <div class = "flex flex-row w-1/2 bg-white rounded-2xl border-[6px] border-y-4 border-l-0 btnClass border-[#FFCF94]">
+        <div class = "flex flex-row w-1/2 mb-1.5 bg-white rounded-2xl border-[6px] border-y-4 border-l-0 btnClass border-[#FFCF94]">
             <div class = "bg-[#FFCF94] pl-3 pr-6 mr-1.5 rounded-l-xl relative flex flex-col justify-center">
                 <div class = "rotate-[270deg] right-3 left-4 mt-12 absolute">
-                    <a href="#" class = "text-2xl text-[#5E5F5E]">Deck</a>
+                    <a href="#" class = "text-2xl text-[#54595D]">Deck</a>
                 </div>
             </div>
             <div id = "deck" class = "flex flex-row gap-0.5 pr-3 py-1">
@@ -96,10 +100,10 @@
         <div class = "flex flex-row bg-white w-full h-full rounded-3xl border-[6px] border-y-4 border-l-0 btnClass border-[#FFCF94]">
             <div class = "bg-[#FFCF94] pl-3 pr-6 mr-1.5 rounded-l-2xl relative flex flex-col justify-center">
                 <div class = "rotate-[270deg] right-4 left-4 mt-20 absolute">
-                    <a href="#" class = "bg-[#A5FF94] text-[#5E5F5E] px-6 rounded-full border-[#B5B876] border-r-2 border-l-2">Type</a>
+                    <a href="#" class = "bg-[#A5FF94] text-[#54595D] px-6 rounded-full border-[#B5B876] border-r-2 border-l-2">Type</a>
                 </div>
             </div>
-            <div id = "cards" class = "w-fit h-fit gap-1.5 bg-white grid grid-cols-7 grid-rows-2 py-1.5 pr-[100px]">
+            <div id = "cards" class = "w-full h-fit gap-1.5 bg-white grid grid-cols-7 grid-rows-2 py-1.5 pr-[100px]">
                 <img src="./cards/Ambush.png" alt="">
                 <img src="./cards/Ambush.png" alt="">
                 <img src="./cards/Ambush.png" alt="">
@@ -116,13 +120,13 @@
                 <img src="./cards/Ambush.png" alt="">
             </div>
             <div class = "bg-[#FFCF94] z-50 rounded-r-2xl relative h-full pl-2.5 pr-1 flex flex-col justify-center select-none">
-                <div id = "prev-page" class = "z-50 border-[3px] border-[#5E5F5E] py-8 bg-white rounded-t-3xl text-center">▲</div>
+                <div id = "prev-page" class = "z-50 border-[3px] border-[#54595D] py-8 bg-white rounded-t-3xl text-center">▲</div>
                 <div class = "py-16 w-7 relative">
-                    <p id = "page-number" class = "text-center text-[#5E5F5E] text-lg absolute top-9">1</p>
-                    <p class = "text-center text-[#5E5F5E] text-3xl absolute top-11 left-1">/</p>
-                    <p id = "total-pages" class = "text-center text-[#5E5F5E] text-lg absolute top-14 left-5">0</p>
+                    <p id = "page-number" class = "text-center text-[#54595D] text-lg absolute top-9">1</p>
+                    <p class = "text-center text-[#54595D] text-3xl absolute top-11 left-1">/</p>
+                    <p id = "total-pages" class = "text-center text-[#54595D] text-lg absolute top-14 left-5">0</p>
                 </div>
-                <div id = "next-page" class = "z-50 border-[3px] border-[#5E5F5E] py-8 bg-white rounded-b-3xl text-center">▼</div>
+                <div id = "next-page" class = "z-50 border-[3px] border-[#54595D] py-8 bg-white rounded-b-3xl text-center">▼</div>
             </div>
         </div>
     </div>
